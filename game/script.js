@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     newImage.style.top = '70%';
     newImage.style.left = '-20px';
     container.appendChild(newImage);
-    makeDraggable(newImage);
+    const counter = document.querySelector('#counter');
+    const nextCounterValue = parseInt(counter.innerHTML) + 1;
+    makeDraggable(newImage, nextCounterValue);
     const sound = new Howl({src: ['sound.mp3']});
   }
 
-  function makeDraggable(image) {
+  function makeDraggable(image, nextCounterValue) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
     image.addEventListener('mousedown', dragMouseDown);
@@ -47,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if ((image.offsetLeft + image.offsetWidth / 2) >= (container.offsetLeft + container.offsetWidth / 1.25)) {
         image.style.display = 'none';
         image.remove();
+        document.querySelector('#counter').innerHTML = nextCounterValue;
         sound.play();
         createNewImage();
       }
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const initialImage = document.querySelector('.draggable');
-  makeDraggable(initialImage);
+  makeDraggable(initialImage, 1);
 
   document.addEventListener('click', function() {
     const introImage = document.getElementById('intro-image');

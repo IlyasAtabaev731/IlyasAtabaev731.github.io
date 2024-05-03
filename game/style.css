@@ -30,7 +30,7 @@ body {
     height: 100%;
     object-fit: contain;
     cursor: move;
-    top: 75%;
+    top: 70%;
     left: -20px;
 }
 
@@ -58,4 +58,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+.counter {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    text-align: center;
 }
