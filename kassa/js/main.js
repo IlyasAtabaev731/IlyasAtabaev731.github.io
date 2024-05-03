@@ -11,11 +11,11 @@ $(document).ready(function () {
         });
 
         $('#skipButton').click(function(){
-            window.location.href = "https://ilyasatabaev731.github.io/";
+            window.location.href = "https://ilyasatabaev731.github.io/game";
         })
 
         $('#workButton').click(function(){
-            window.location.href = "https://ilyasatabaev731.github.io/";
+            window.location.href = "https://ilyasatabaev731.github.io/game";
         })
     });
 
