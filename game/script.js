@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     newImage.src = images[Math.floor(Math.random() * images.length)];
     newImage.classList.add('draggable');
     newImage.id = 'image' + (document.querySelectorAll('.draggable').length + 1);
-    newImage.style.top = '75%';
+    newImage.style.top = '70%';
     newImage.style.left = '-20px';
     container.appendChild(newImage);
     makeDraggable(newImage);
