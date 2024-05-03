@@ -17,6 +17,7 @@ $(document).ready(function () {
         $('#workButton').click(function(){
             window.location.href = "https://ilyasatabaev731.github.io/game";
         })
+        
     });
 
     $(function () {
