@@ -1,0 +1,483 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,500,700&display=swap&subset=cyrillic,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic,cyrillic-ext");
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/gilroy/Gilroy-ExtraBold.eot");
+  src: url("../fonts/gilroy/Gilroy-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy/Gilroy-ExtraBold.woff") format("woff"), url("../fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoirProBold";
+  src: url("../fonts/NoirPro/NoirPro-Bold.eot");
+  src: url("../fonts/NoirPro/NoirPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/NoirPro/NoirPro-Bold.woff2") format("woff2"), url("../fonts/NoirPro/NoirPro-Bold.woff") format("woff"), url("../fonts/NoirPro/NoirPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoirProHeavy";
+  src: url("../fonts/NoirPro/NoirPro-Heavy.eot");
+  src: url("../fonts/NoirPro/NoirPro-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/NoirPro/NoirPro-Heavy.woff2") format("woff2"), url("../fonts/NoirPro/NoirPro-Heavy.woff") format("woff"), url("../fonts/NoirPro/NoirPro-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoirProMedium";
+  src: url("../fonts/NoirPro/NoirPro-Medium.eot");
+  src: url("../fonts/NoirPro/NoirPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/NoirPro/NoirPro-Medium.woff2") format("woff2"), url("../fonts/NoirPro/NoirPro-Medium.woff") format("woff"), url("../fonts/NoirPro/NoirPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoirProRegular";
+  src: url("../fonts/NoirPro/NoirPro-Regular.eot");
+  src: url("../fonts/NoirPro/NoirPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/NoirPro/NoirPro-Regular.woff2") format("woff2"), url("../fonts/NoirPro/NoirPro-Regular.woff") format("woff"), url("../fonts/NoirPro/NoirPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NoirProLight";
+  src: url("../fonts/NoirPro/NoirPro-Light.eot");
+  src: url("../fonts/NoirPro/NoirPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/NoirPro/NoirPro-Light.woff2") format("woff2"), url("../fonts/NoirPro/NoirPro-Light.woff") format("woff"), url("../fonts/NoirPro/NoirPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PIXY";
+  src: url("../fonts/PIXY/pixy.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/PIXY/pixy.eot?#iefix") format("embedded-opentype"), url("../fonts/PIXY/pixy.woff2") format("woff2"), url("../fonts/PIXY/pixy.woff") format("woff"), url("../fonts/PIXY/pixy.ttf") format("truetype"), url("../fonts/PIXY/pixy.svg#pixy") format("svg"); /* Chrome < 4, Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "PT Sans", sans-serif !important;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, hr {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: none;
+}
+
+a, input, button {
+  transition: 0.5s;
+}
+a:hover, input:hover, button:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+input[type=submit], button {
+  border: none;
+  cursor: pointer;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.mw {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.fancybox-slide:before {
+  margin: 0;
+}
+
+.scrollup {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #527DA0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: none;
+  z-index: 98;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
+.scrollup img {
+  width: 20px;
+}
+.scrollup:hover {
+  opacity: 0.9;
+}
+.scrollup .fas_icon {
+  font-size: 20px;
+  color: #fff;
+}
+.scrollup.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999999;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  max-width: 400px;
+  padding: 0 !important;
+}
+.modal::-webkit-scrollbar {
+  width: 0;
+}
+.modal .m-content {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  position: relative;
+}
+.modal .m-content .c {
+  background-color: #fff;
+  width: 100%;
+  padding: 40px;
+}
+.modal .m-content .c h3 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 22px;
+  color: #222;
+}
+.modal .m-content .c .success_h3 {
+  font-size: 30px;
+  color: #18ba60;
+}
+.modal .m-content .c h6 {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 24px;
+  color: #2a2a2a;
+  font-weight: 400;
+}
+.modal .m-content .c form {
+  width: 100%;
+  max-width: 500px;
+}
+.modal .m-content .c form label {
+  color: #527DA0;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+.modal .m-content .c form input, .modal .m-content .c form select, .modal .m-content .c form textarea {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 15px;
+  color: #222;
+  font-size: 14px;
+}
+.modal .m-content .c form textarea {
+  min-height: 100px;
+  resize: none;
+}
+.modal .m-content .c form .inp_line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .m-content .c form .inp_line .inp_address {
+  width: 50%;
+}
+.modal .m-content .c form .inp_line .inp_home, .modal .m-content .c form .inp_line .inp_home_num {
+  width: 20%;
+}
+.modal .m-content .c form .policy {
+  color: #222;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  display: block;
+}
+.modal .m-content .c form .policy a {
+  color: #527DA0;
+}
+.modal .m-content .c form .policy a:hover {
+  color: #fff;
+}
+.modal .m-content .c form .policy input {
+  margin-right: 10px;
+}
+.modal .m-content .c small {
+  color: #676767;
+  font-size: 10px;
+  font-weight: 300;
+}
+.modal .m-content .c small a {
+  color: #676767;
+  text-decoration: underline;
+}
+.modal .m-content .c small a:hover {
+  color: #18ba60;
+}
+
+@media (max-width: 575px) {
+  .scrollup {
+    right: 10px;
+    bottom: 50px;
+  }
+  .modal .m-content .c h3 {
+    padding: 30px 0;
+    padding-top: 50px;
+    font-size: 22px;
+  }
+}
+/*
+iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+}
+*/
+.btn_c {
+  width: 100%;
+}
+.btn_c .btn_m {
+  border-radius: 60px;
+  background: #2381CC;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  color: #FFF;
+  text-align: center;
+  font-family: "NoirProBold", sans-serif !important;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+}
+.btn_c .btn_m:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.ui-loader {
+  display: none;
+}
+
+img {
+  pointer-events: none !important;
+}
+
+.page {
+  background: #F5F5F5;
+  overflow: hidden;
+}
+.page .main {
+  background: #FFF;
+}
+.page .main .mw {
+  padding: 0 2vh;
+  z-index: 2;
+}
+.page .main .mw .main_cont1 .card, .page .main .mw .main_cont2 .card {
+  background: #FFF;
+  padding: 35px 30px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.page .main .mw .main_cont1 .card .logo, .page .main .mw .main_cont2 .card .logo {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+.page .main .mw .main_cont1 .card .logo a, .page .main .mw .main_cont2 .card .logo a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-family: "Pixy", sans-serif !important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.page .main .mw .main_cont1 .card .logo a img, .page .main .mw .main_cont2 .card .logo a img {
+  width: 41px;
+  margin-right: 15px;
+  height: auto;
+}
+.page .main .mw .main_cont1 .card .decor1, .page .main .mw .main_cont2 .card .decor1 {
+  position: absolute;
+  width: 500px;
+  opacity: 0.7;
+  top: -20px;
+}
+.page .main .mw .main_cont1 .card .decor1 img, .page .main .mw .main_cont2 .card .decor1 img {
+  width: 100%;
+  height: auto;
+  animation: decor_anim 10s linear infinite;
+}
+@keyframes decor_anim {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+.page .main .mw .main_cont1 .card .img, .page .main .mw .main_cont2 .card .img {
+  width: 288px;
+  z-index: 2;
+}
+.page .main .mw .main_cont1 .card .img img, .page .main .mw .main_cont2 .card .img img {
+  width: 100%;
+  margin-left: 10px;
+  height: auto;
+}
+.page .main .mw .main_cont1 .card .h1, .page .main .mw .main_cont2 .card .h1 {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  text-align: center;
+  font-family: "NoirProBold", sans-serif !important;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+.page .main .mw .main_cont1 .card .h1 b, .page .main .mw .main_cont2 .card .h1 b {
+  font-family: "NoirProBold", sans-serif !important;
+  font-size: 48px;
+  line-height: 45px;
+}
+.page .main .mw .main_cont1 .card p, .page .main .mw .main_cont2 .card p {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  text-align: center;
+  font-family: "PIXY", sans-serif !important;
+  font-size: 14px;
+  font-style: normal;
+  max-width: 210px;
+  font-weight: 400;
+  height: 53px;
+  line-height: normal;
+}
+.page .main .mw .main_cont1 .card p b, .page .main .mw .main_cont2 .card p b {
+  font-family: "NoirProBold", sans-serif !important;
+  font-weight: 700;
+}
+.page .main .mw .main_cont1 .card p span, .page .main .mw .main_cont2 .card p span {
+  color: #EF3D3A;
+  font-family: "NoirProBold", sans-serif !important;
+  font-weight: 400;
+}
+.page .main .mw .main_cont1 .card .h5, .page .main .mw .main_cont2 .card .h5 {
+  margin-top: 8px;
+  color: #000;
+  text-align: center;
+  font-family: "NoirProBold", sans-serif !important;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.page .main .mw .main_cont1 .card .rounds, .page .main .mw .main_cont2 .card .rounds {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.page .main .mw .main_cont1 .card .rounds span, .page .main .mw .main_cont2 .card .rounds span {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0 5px;
+}
+.page .main .mw .main_cont1 .card .rounds span.active, .page .main .mw .main_cont2 .card .rounds span.active {
+  background: #000000;
+}
+.page .main .mw .main_cont1 .card small, .page .main .mw .main_cont2 .card small {
+  color: #000;
+  text-align: center;
+  font-family: "PIXY", sans-serif !important;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115.143%;
+  letter-spacing: 1.8px;
+  margin-top: 20px;
+}
+.page .main .mw .main_cont1 .card1 p, .page .main .mw .main_cont2 .card1 p {
+  max-width: 272px;
+}
+.page .main .mw .main_cont2 {
+  display: none;
+}
+.page .main .mw .main_cont2 .card1 .img img {
+  margin-left: -10px;
+}
+.page .main .mw .main_cont2 .card1 p {
+  max-width: 272px;
+}
+.page .m_title {
+  padding-bottom: 5vh;
+}
+.page .m_title .h3, .page .m_title .h2 {
+  color: #222;
+  font-size: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  text-align: center;
+}

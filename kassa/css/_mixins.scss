@@ -1,0 +1,123 @@
+@mixin df($fd,$jc,$ai)
+{
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin df-r-sb-c()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin df-r-fs-c()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin df-r-c-c()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin df-r-fe-c()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+@mixin df-r-c-fs()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+@mixin df-r-c-s()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+@mixin df-r-fs-fe()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+@mixin df-r-sb-fs()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@mixin df-r-fs-s()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+@mixin df-r-fs-fs()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin df-r-sb-s()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+@mixin df-r-c-fe()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin df-r-fe-fe()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@mixin center_max_width($mw)
+{
+  margin: 0 auto;
+  max-width: $mw;
+}
+
+
+@mixin text_style($fz, $col, $fw)
+{
+    font-size: $fz;
+    color: $col;
+    font-weight: $fw;
+}
+
+@mixin grid($repeat_count, $col_gap, $row_gap)
+{
+    display: grid;
+    grid-template-columns: repeat($repeat_count, 1fr);
+    column-gap: $col_gap;
+    row-gap: $row_gap;
+}

@@ -1,0 +1,35 @@
+h1,h2,h3,h4,h5,h6,p,ul,hr
+{
+  margin: 0;
+  padding: 0;
+}
+
+.card
+{
+  border: none;
+}
+
+a, input, button
+{
+  transition: 0.5s;
+
+  &:hover
+  {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+input[type=submit], button
+{
+  border: none;
+  cursor: pointer;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

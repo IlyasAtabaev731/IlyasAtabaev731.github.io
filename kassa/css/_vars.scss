@@ -1,0 +1,29 @@
+$main_color: #527DA0;
+$main_color2: #4169E1;
+$text_color: #4d4d4d;
+$text_color_white: #fff;
+$white: #fff;
+$black: #000;
+$dark: #222;
+$dark2: #4d4d4d;
+$grey: #ccc;
+$max_width: 420px;
+
+
+$main_title_font_size: 44px;
+$main_subtitle_font_size: 22px;
+$main_text_font_size: 16px;
+$main_padding_top: 60px;
+$main_padding_bottom: 60px;
+$padding_bottom: 16px;
+
+.mw
+{
+  width: 100%;
+  max-width: $max_width;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+@import "mixins.scss"

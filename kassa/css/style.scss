@@ -1,0 +1,324 @@
+@import "reset_style";
+
+
+
+
+/*
+iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-style: none;
+}
+*/
+
+.btn_c
+{
+  width: 100%;
+
+  .btn_m
+  {
+    border-radius: 60px;
+    background: #2381CC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    color: #FFF;
+    text-align: center;
+    font-family: "NoirProBold", sans-serif !important;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; 
+    @include df-r-c-c();
+    width: 100%;
+    height: 48px;
+
+    &:hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.ui-loader
+{
+  display: none;
+}
+
+img 
+{
+  pointer-events: none!important;
+}
+
+.page
+{
+  background: #F5F5F5;
+  overflow: hidden;
+
+  .main
+  {
+    background: #FFF;
+    
+    .mw
+    {
+      padding: 0 2vh;
+      z-index: 2;
+
+      .main_cont1, .main_cont2
+      {
+        .card
+        {
+          background: #FFF;
+          padding: 35px 30px 45px;
+          @include df(column,flex-start,center);
+          position: relative;
+          z-index: 2;
+
+          .logo
+          {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+
+            a
+            {
+              @include df-r-c-c();
+              color: #000;
+              font-family: 'Pixy', sans-serif !important;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+
+              img
+              {
+                width: 41px;
+                margin-right: 15px;
+                height: auto;
+              }
+            }
+          }
+
+          .decor1
+          {
+            position: absolute;
+            width: 500px;
+            opacity: 0.7;
+            top: -20px;
+
+            img 
+            {
+              width:  100%;
+              height: auto;
+              animation: decor_anim 10s linear infinite;
+            }
+          }
+
+          @keyframes decor_anim 
+          {
+            0%
+            {
+              transform: scale(1) rotate(0);
+            }
+            
+            50%
+            {
+              transform: scale(1.1) rotate(180deg);
+            }
+            
+            100%
+            {
+              transform: scale(1) rotate(360deg);
+            }
+          }
+
+          .img
+          {
+            width: 288px;
+            z-index: 2;
+            
+            img
+            {
+              width: 100%;
+              margin-left: 10px;
+              height: auto;
+            }
+          }
+
+          .h1
+          {
+            position: relative;
+            z-index: 2;
+            color: #000;
+            text-align: center;
+            font-family: "NoirProBold", sans-serif !important;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; 
+            margin-bottom: 25px;
+            margin-top: 30px;
+
+            b{
+              font-family: "NoirProBold", sans-serif !important;
+              font-size: 48px;
+              line-height: 45px;
+            }
+          }
+
+          p
+          {
+            position: relative;
+            z-index: 2;
+            color: #000;
+            text-align: center;
+            font-family: 'PIXY', sans-serif !important;
+            font-size: 14px;
+            font-style: normal;
+            max-width: 210px;
+            font-weight: 400;
+            height: 53px;
+            line-height: normal;
+
+            b{
+              font-family: "NoirProBold", sans-serif !important;
+              font-weight: 700;
+            }
+
+            span
+            {
+              color: #EF3D3A;
+              font-family: "NoirProBold", sans-serif !important;
+              font-weight: 400;
+            }
+          }
+
+          .h5
+          {
+            margin-top: 8px;
+            color: #000;
+            text-align: center;
+            font-family: "NoirProBold", sans-serif !important;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px; 
+          }
+
+          .rounds
+          {
+            margin: 20px 0;
+            @include df-r-c-c();
+
+            span 
+            {
+              width: 8px;
+              height: 8px;
+              flex-shrink: 0;
+              border-radius: 50%;
+              background: rgba(0, 0, 0, 0.20);
+              margin: 0 5px;
+
+              &.active 
+              {
+                background: #000000;
+              }
+            }
+          }
+
+          small
+          {
+            color: #000;
+            text-align: center;
+            font-family: 'PIXY', sans-serif !important;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 115.143%; 
+            letter-spacing: 1.8px;
+            margin-top: 20px;
+          }
+        }
+
+        .card1
+        {
+          p
+          {
+            max-width: 272px;
+          }
+        }
+      }
+
+      .main_cont2
+      {
+        display: none;
+
+        .card1
+        {
+          .img 
+          {
+            img 
+            {
+              margin-left: -10px;
+            }
+          }
+          p
+          {
+            max-width: 272px;
+          }
+        }
+      }
+    }
+  }
+
+  .m_title
+  {
+    padding-bottom: 5vh;
+
+    .h3, .h2
+    {
+      color: $dark;
+      font-size: 30px;
+      padding-bottom: 20px;
+      position: relative;
+      text-align: center;
+    }
+  }
+}
+
+
+
+@media (max-width: 575px)
+{
+  @import "vars_575.scss";
+
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767px)
+{
+  @import "vars_767.scss";
+
+ 
+}
+
+
+@media (min-width: 768px) and (max-width: 991px)
+{
+  @import "vars_991.scss";
+
+  
+}
+
+
+@media (min-width: 992px) and (max-width: 1300px)
+{
+  @import "vars_1300.scss";
+
+}

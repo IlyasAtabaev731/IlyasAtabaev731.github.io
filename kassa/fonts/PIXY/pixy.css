@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'PIXY';
+	src: url('../fonts/pixy.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/pixy.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/pixy.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/pixy.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/pixy.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/pixy.svg#pixy') format('svg'); /* Chrome < 4, Legacy iOS */
+}

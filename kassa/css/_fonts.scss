@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,500,700&display=swap&subset=cyrillic,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic,cyrillic-ext');
+
+@font-face {
+    font-family: 'GilroyExtraBold';
+    src: url('../fonts/gilroy/Gilroy-ExtraBold.eot');
+    src: url('../fonts/gilroy/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroy/Gilroy-ExtraBold.woff') format('woff'),
+    url('../fonts/gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+
+@font-face {
+    font-family: 'NoirProBold';
+    src: url('../fonts/NoirPro/NoirPro-Bold.eot');
+    src: url('../fonts/NoirPro/NoirPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NoirPro/NoirPro-Bold.woff2') format('woff2'),
+        url('../fonts/NoirPro/NoirPro-Bold.woff') format('woff'),
+        url('../fonts/NoirPro/NoirPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'NoirProHeavy';
+    src: url('../fonts/NoirPro/NoirPro-Heavy.eot');
+    src: url('../fonts/NoirPro/NoirPro-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NoirPro/NoirPro-Heavy.woff2') format('woff2'),
+        url('../fonts/NoirPro/NoirPro-Heavy.woff') format('woff'),
+        url('../fonts/NoirPro/NoirPro-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NoirProMedium';
+    src: url('../fonts/NoirPro/NoirPro-Medium.eot');
+    src: url('../fonts/NoirPro/NoirPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NoirPro/NoirPro-Medium.woff2') format('woff2'),
+        url('../fonts/NoirPro/NoirPro-Medium.woff') format('woff'),
+        url('../fonts/NoirPro/NoirPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NoirProRegular';
+    src: url('../fonts/NoirPro/NoirPro-Regular.eot');
+    src: url('../fonts/NoirPro/NoirPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NoirPro/NoirPro-Regular.woff2') format('woff2'),
+        url('../fonts/NoirPro/NoirPro-Regular.woff') format('woff'),
+        url('../fonts/NoirPro/NoirPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NoirProLight';
+    src: url('../fonts/NoirPro/NoirPro-Light.eot');
+    src: url('../fonts/NoirPro/NoirPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NoirPro/NoirPro-Light.woff2') format('woff2'),
+        url('../fonts/NoirPro/NoirPro-Light.woff') format('woff'),
+        url('../fonts/NoirPro/NoirPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'PIXY';
+	src: url('../fonts/PIXY/pixy.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/PIXY/pixy.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/PIXY/pixy.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/PIXY/pixy.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/PIXY/pixy.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/PIXY/pixy.svg#pixy') format('svg'); /* Chrome < 4, Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
