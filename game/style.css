@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "PIXY";
+    src: url("./fonts/PIXY/pixy.eot"); /* IE 9 Compatibility Mode */
+    src: url("./fonts/PIXY/pixy.eot?#iefix") format("embedded-opentype"), url("./fonts/PIXY/pixy.woff2") format("woff2"), url("./fonts/PIXY/pixy.woff") format("woff"), url("./fonts/PIXY/pixy.ttf") format("truetype"), url("./fonts/PIXY/pixy.svg#pixy") format("svg"); /* Chrome < 4, Legacy iOS */
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -60,9 +68,21 @@ body {
     height: 100%;
 }
 
+.counter-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .counter {
-    position: absolute;
-    top: 15px;
-    left: 50%;
+    margin: 0 auto;
     text-align: center;
+    color: #000;
+    font-family: "Pixy", sans-serif !important;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
