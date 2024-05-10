@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $(function () {
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+        
         $('.show_second_cont').click(function(){
             $('.main_cont1').css('display', 'none');
             $('.main_cont2').css('display','block');
