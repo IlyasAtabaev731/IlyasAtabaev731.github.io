@@ -1,7 +1,6 @@
 import './node_modules/axios/dist/axios.js';
 
 
-const tg = window.Telegram.WebApp;
 const defaultUrl = "https://pure-tadpole-causal.ngrok-free.app";
 
 async function fetchData(endpoint, data) {
@@ -13,18 +12,18 @@ async function fetchData(endpoint, data) {
   }
 }
 
-async function setUserBalance() {
-  const userId = tg.initUnsafeData.user.id;
+async function setUserBalance(userId) {
   const data = await fetchData("user/balance", {id: userId});
   console.log(data);
   document.querySelector('#counter').innerHTML = data["balance"];
 }
 
-(async function() {
-  await setUserBalance();
-})()
-
 document.addEventListener('DOMContentLoaded', function() {
+  const tg = window.Telegram.WebApp;
+  const userId = tg.initUnsafeData.user.id;
+  (async function() {
+    await setUserBalance(userId);
+  })()
   const container = document.querySelector('.container');
   const sound = new Howl({
     src: ['sound.mp3']
@@ -74,7 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
         image.style.display = 'none';
         image.remove();
         (async function () {
-          const userId = tg.initUnsafeData.user.id;
           await fetchData("game/incrementBalance", {id: userId});
         })()
         const counter = document.querySelector('#counter');
