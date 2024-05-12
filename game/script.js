@@ -1,9 +1,35 @@
+import './node_modules/axios/dist/axios.js';
+
+
+const tg = window.Telegram.WebApp;
+const defaultUrl = "https://pure-tadpole-causal.ngrok-free.app";
+
+async function fetchData(endpoint, data) {
+  try {
+    const response = await axios.post(`${defaultUrl}/${endpoint}`, data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function setUserBalance() {
+  const userId = tg.initUnsafeData.user.id;
+  const data = await fetchData("user/balance", {id: userId});
+  console.log(data);
+  document.querySelector('#counter').innerHTML = data["balance"];
+}
+
+(async function() {
+  await setUserBalance();
+})()
+
 document.addEventListener('DOMContentLoaded', function() {
   const container = document.querySelector('.container');
   const sound = new Howl({
     src: ['sound.mp3']
   });
-
+  
   function createNewImage() {
     const newImage = document.createElement('img');
     const images = ['image1.png', 'image2.png', 'image3.png'];
@@ -13,13 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     newImage.style.top = '70%';
     newImage.style.left = '-20px';
     container.appendChild(newImage);
-    const counter = document.querySelector('#counter');
-    const nextCounterValue = parseInt(counter.innerHTML) + 1;
-    makeDraggable(newImage, nextCounterValue);
+    makeDraggable(newImage);
     const sound = new Howl({src: ['sound.mp3']});
   }
 
-  function makeDraggable(image, nextCounterValue) {
+  function makeDraggable(image) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
     image.addEventListener('mousedown', dragMouseDown);
@@ -49,7 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
       if ((image.offsetLeft + image.offsetWidth / 2) >= (container.offsetLeft + container.offsetWidth / 1.25)) {
         image.style.display = 'none';
         image.remove();
-        document.querySelector('#counter').innerHTML = nextCounterValue;
+        (async function () {
+          const userId = tg.initUnsafeData.user.id;
+          await fetchData("game/incrementBalance", {id: userId});
+        })()
+        const counter = document.querySelector('#counter');
+        counter.innerHTML = parseInt(counter.innerHTML) + 1;
         sound.play();
         createNewImage();
       }
