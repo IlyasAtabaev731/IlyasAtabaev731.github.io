@@ -20,7 +20,7 @@ async function setUserBalance(userId) {
 
 document.addEventListener('DOMContentLoaded', function() {
   const tg = window.Telegram.WebApp;
-  const userId = tg.initUnsafeData.user.id;
+  const userId = tg.initDataUnsafe.user.id;
   (async function() {
     await setUserBalance(userId);
   })()
