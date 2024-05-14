@@ -1,7 +1,7 @@
 import './node_modules/axios/dist/axios.js';
 
 
-const defaultUrl = "https://pure-tadpole-causal.ngrok-free.app";
+const defaultUrl = "https://locally-true-leopard.ngrok-free.app";
 
 async function fetchData(endpoint, data) {
   try {
