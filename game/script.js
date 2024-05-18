@@ -1,7 +1,7 @@
 import './node_modules/axios/dist/axios.js';
 
 
-const defaultUrl = "https://feline-immense-lionfish.ngrok-free.app";
+const defaultUrl = "https://dassie-golden-bull.ngrok-free.app";
 
 async function fetchData(endpoint, data) {
   try {
