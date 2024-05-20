@@ -12,9 +12,12 @@ async function fetchData(endpoint, data) {
   }
 }
 
+let amountCounterChange = 1;
+
 async function setUserBalance(userId) {
   const data = await fetchData("user/balance", {id: userId});
   console.log(data);
+  amountCounterChange = amountCounterChange * parseInt(data["multiplier"]);
   document.querySelector('#counter').innerHTML = data["balance"];
 }
 
@@ -76,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
           await fetchData("game/incrementBalance", {id: userId});
         })()
         const counter = document.querySelector('#counter');
-        counter.innerHTML = parseInt(counter.innerHTML) + 1;
+        counter.innerHTML = parseInt(counter.innerHTML) + amountCounterChange;
         sound.play();
         createNewImage();
       }
