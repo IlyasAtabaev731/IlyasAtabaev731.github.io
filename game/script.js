@@ -21,12 +21,22 @@ async function setUserBalance(userId) {
   document.querySelector('#counter').innerHTML = data["balance"];
 }
 
+async function mountBalance(userId) {
+  const data = await fetchData("user/balance/mount", {id: userId, balance: parseInt(counter.innerHTML)});
+  console.log(data);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const tg = window.Telegram.WebApp;
   const userId = tg.initDataUnsafe.user.id;
   (async function() {
     await setUserBalance(userId);
   })()
+  setInterval(function () {
+    (async function () {
+      await mountBalance(userId);
+    })()
+  }, 5000)
   const container = document.querySelector('.container');
   const sound = new Howl({
     src: ['sound.mp3']
@@ -75,9 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
       if ((image.offsetLeft + image.offsetWidth / 2) >= (container.offsetLeft + container.offsetWidth / 1.25)) {
         image.style.display = 'none';
         image.remove();
-        (async function () {
-          await fetchData("game/incrementBalance", {id: userId});
-        })()
         const counter = document.querySelector('#counter');
         counter.innerHTML = parseInt(counter.innerHTML) + amountCounterChange;
         sound.play();
