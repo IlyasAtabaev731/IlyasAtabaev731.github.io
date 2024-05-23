@@ -22,6 +22,7 @@ async function setUserBalance(userId) {
 }
 
 async function mountBalance(userId) {
+  const counter = document.querySelector('#counter');
   const data = await fetchData("user/balance/mount", {id: userId, balance: parseInt(counter.innerHTML)});
   console.log(data);
 }
